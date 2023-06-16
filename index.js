@@ -10,6 +10,9 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', '/home_page.html'))
 })
 
+app.get('/login', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public', '/login_page.html'))
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
