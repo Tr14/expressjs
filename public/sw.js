@@ -1,3 +1,4 @@
+/*
 var config = {
     apiKey: 'AIzaSyDU5MIE4-FCKOiQpftQmL7fEhyBx3lPoxE',
     messagingSenderId: '121599275924',
@@ -7,8 +8,8 @@ var config = {
     siteid: '859241e8ea14460667312de48e0504c3'
 };
 importScripts('//cdnt.netcoresmartech.com/swv4.js');
+*/
 
-/*
 var config = {
     apiKey: 'AIzaSyDU5MIE4-FCKOiQpftQmL7fEhyBx3lPoxE',
     messagingSenderId: '121599275924',
@@ -18,4 +19,3 @@ var config = {
     siteid: '48ae623c4419221b6d4b53c360c56acc'
 };
 importScripts('//cdnt.netcoresmartech.com/swv4.js');
-*/
