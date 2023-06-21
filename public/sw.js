@@ -1,3 +1,12 @@
+var config = {
+    apiKey: 'AIzaSyDU5MIE4-FCKOiQpftQmL7fEhyBx3lPoxE',
+    messagingSenderId: '121599275924',
+    appId: '1:121599275924:web:576b53586ed753f746d581',
+    projectId: 'aka-website-1f766',
+    user_key: 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G',
+    siteid: '48ae623c4419221b6d4b53c360c56acc'
+};
+importScripts('//cdnt.netcoresmartech.com/swv4.js');
 /*
 var config = {
     apiKey: 'AIzaSyDU5MIE4-FCKOiQpftQmL7fEhyBx3lPoxE',
@@ -9,13 +18,3 @@ var config = {
 };
 importScripts('//cdnt.netcoresmartech.com/swv4.js');
 */
-
-var config = {
-    apiKey: 'AIzaSyDU5MIE4-FCKOiQpftQmL7fEhyBx3lPoxE',
-    messagingSenderId: '121599275924',
-    appId: '1:121599275924:web:576b53586ed753f746d581',
-    projectId: 'aka-website-1f766',
-    user_key: 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G',
-    siteid: '48ae623c4419221b6d4b53c360c56acc'
-};
-importScripts('//cdnt.netcoresmartech.com/swv4.js');
