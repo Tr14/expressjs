@@ -26,8 +26,21 @@
 <script src='//cdnt.netcoresmartech.com/smartechclient.js'></script>
 <script>
 smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G' );
-smartech('register', '48ae623c4419221b6d4b53c360c56acc');
+smartech('register', '3771fbc4929a0ebee9e4dacb35ec6133');
 smartech('identify', '');
+smartech('dispatch', 'Page Browse', {'url': window.location.href});
+
+function signUp(){
+	var email = document.getElementById("email_input").value;
+	var full_name = document.getElementById("full_name_input").value;
+	smartech('contact', 81, {
+    		'pk^email': email,
+    		'FULL_NAME': full_name,
+		'SOURCE': 'filmakadigital.000webhostapp.com'
+    	});
+	smartech('identify', email);
+    	smartech('dispatch', 'Lead Submitted', {'url': window.location.href});
+}
 </script>
 </head>
 
@@ -103,20 +116,20 @@ smartech('identify', '');
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="#">
+                        <form action="https://filmakadigital.000webhostapp.com/">
                             <div class="input__item">
-                                <input type="text" placeholder="Email address">
+                                <input id="email_input" type="text" placeholder="Email address">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Name">
+                                <input id="full_name_input" type="text" placeholder="Your Name">
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
                                 <input type="text" placeholder="Password">
                                 <span class="icon_lock"></span>
                             </div>
-                            <button type="submit" class="site-btn">Login Now</button>
+                            <button type="submit" class="site-btn" onclick=signUp()>Login Now</button>
                         </form>
                         <h5>Already have an account? <a href="#">Log In!</a></h5>
                     </div>
