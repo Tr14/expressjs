@@ -77,10 +77,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   mParticle.logPageView('Page Views', {'url':window.location.toString()});
 
+  var productName = document.getElementsByClassName("product-name")[0].innerHTML;
+  console.log(productName);
+
   mParticle.logEvent(
 	"Product View Detail",
 	mParticle.EventType.Other,
-  	{'id':'1','sku':'83919','name':document.getElementsByClassName("product-name")[0].innerHTML,'url':window.location.toString()}
+  	{'id':'1','sku':'83919','name':productName,'url':window.location.toString()}
   );
 </script>
 
