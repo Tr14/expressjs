@@ -77,8 +77,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   mParticle.logPageView('Page Views', {'url':window.location.toString()});
 
+  var productName = "";
   window.onload = (
-  	var productName = document.getElementsByClassName("product-name")[0].innerHTML;
+  	productName = document.getElementsByClassName("product-name")[0].innerHTML;
 
 	mParticle.logEvent(
 		"Product View Detail",
