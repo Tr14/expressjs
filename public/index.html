@@ -80,13 +80,9 @@ smartech('dispatch','Page Browse',{'url': window.location.href});
      // !! Note: do not attempt to access the user object at this point
      // !! var user = window.mParticle.Identity.getCurrentUser();
      // !! Instead, access the user object via the mParticle.config.identityCallback option
-  }
+  });
 
-  mParticle.logEvent(
-  'Home Page',
-  mParticle.EventType.Navigation,
-  {'url':window.location.href}
-);
+  mParticle.logEvent('Home Page', mParticle.EventType.Navigation, {'url':window.location.href});
 );
 </script>
 </head>
