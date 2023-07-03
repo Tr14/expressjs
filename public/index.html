@@ -50,7 +50,7 @@ smartech('dispatch','Page Browse',{'url': window.location.href});
   window.mParticle = {
       config: {
           isDevelopmentMode: true,
-	  logLevel: "verbose",
+	  //logLevel: "verbose",
           identifyRequest: {
               userIdentities: {
                   email: 'xuantrucx123@gmail.com',
@@ -60,7 +60,7 @@ smartech('dispatch','Page Browse',{'url': window.location.href});
           identityCallback: function(result) {
             // Do something once an identity call has been made.
             // For more information, see https://docs.mparticle.com/developers/sdk/web/idsync/#sdk-initialization-and-identify
-            console.log(result);
+            //console.log(result);
           },
           dataPlan: {
             planId: 'my_plan_id',
@@ -82,7 +82,8 @@ smartech('dispatch','Page Browse',{'url': window.location.href});
      // !! Instead, access the user object via the mParticle.config.identityCallback option
   });
 
-  mParticle.logEvent('Home Page', mParticle.EventType.Navigation, {'url':window.location.href});
+  mParticle.logPageView("Landing",{page: window.location.toString(),referring-page: document.referrer}
+);
 </script>
 </head>
 
