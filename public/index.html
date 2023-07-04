@@ -91,7 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   var identityCallback = function(result) { 
   	if (result.getUser()) { 
 		result.getUser().setUserAttribute('$lastname', 'Nguyen')
-    		console.log("LOGIN", result)
+    		console.log("LOGIN SUCCESS", result)
   	} 
   };
   mParticle.Identity.login(identityRequest, identityCallback);

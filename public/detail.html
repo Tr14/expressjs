@@ -87,6 +87,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   		{'id':'1','sku':'83919','name':productName,'url':window.location.toString()}
   	);
   };
+
+
+  var identityCallback = function(result) { 
+  	if (result.getUser()) { 
+    		console.log("LOGOUT SUCCESS", result)
+  	} 
+  };
+  mParticle.Identity.logout({}, identityCallback);
 </script>
 
 
