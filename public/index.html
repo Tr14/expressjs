@@ -63,14 +63,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   });
 
   var identityRequest = {
-  userIdentities: {
-    	email: 'xuantrucx123@gmail.com',
-    	customerid: '123456'
-    }
+    	userIdentities: {
+    		email: 'xuantrucx123@gmail.com',
+    		customerid: '123456'
+    	}
   };
   var identityCallback = function(result) { 
   	if (result.getUser()) {
-		result.getUser().setUserAttribute([{'$firstname', 'Truc'},{'$lastname','Nguyen'},{'$leadsource':'akadigital']);
+		result.getUser().setUserAttribute({'$firstname', 'Truc'},{'$lastname','Nguyen'},{'$leadsource':'akadigital');
     		console.log("LOGIN", result);
   	}
   };
