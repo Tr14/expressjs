@@ -42,22 +42,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       config: {
           isDevelopmentMode: true,
 	  //logLevel: "verbose"
-          identifyRequest: {
-              userIdentities: {
-                  email: 'xuantrucx123@gmail.com',
-                  customerid: '123456',
-              },
-          },
-          identityCallback: function(result) {
-            // Do something once an identity call has been made.
-            // For more information, see https://docs.mparticle.com/developers/sdk/web/idsync/#sdk-initialization-and-identify
-            //console.log(result);
-	    if (result.getUser()) {
-        	result.getUser().setUserAttribute('$firstname', 'Truc');
-      	    } else {
-        	//the IDSync call failed - see below for more details on failed requests
-      	    }
-          },
           dataPlan: {
             planId: 'dev_akadigital_net',
             planVersion: 1
@@ -85,9 +69,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   };
   var identityCallback = function(result) { 
-  	if (result.getUser()) { 
+  	if (result.getUser()) {
+		result.getUser().setUserAttribute([{'$firstname', 'Truc'},{'$lastname','Nguyen'},{'$leadsource':'akadigital']);
     		console.log("LOGIN", result);
-  	} 
+  	}
   };
   mParticle.Identity.login(identityRequest, identityCallback);
 
