@@ -42,6 +42,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       config: {
           isDevelopmentMode: true,
 	  //logLevel: "verbose"
+	  identifyRequest: {
+      		userIdentities: {
+        		email: 'xuantrucx123@gmail.com',
+        		customerid: '123456'    
+      		}
+    	  },
+          identityCallback: function(result) {
+      		// You can check if there's a populated user object, otherwise there was an error
+      		// You can also inspect the result.httpCode - see below for a description of the supported codes
+      	  	if (result.getUser()) {
+        		result.getUser().setUserAttribute('$leadsource', 'akadigital')
+			console.log("CALLBACK", result)
+          	} else {
+        		//the IDSync call failed - see below for more details on failed requests
+			console.log("GET DATA FAIL")
+          	}
+	  }
+
           dataPlan: {
             planId: 'dev_akadigital_net',
             planVersion: 1
@@ -61,20 +79,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      // !! var user = window.mParticle.Identity.getCurrentUser();
      // !! Instead, access the user object via the mParticle.config.identityCallback option
   });
-
-  var identityRequest = {
-    	userIdentities: {
-    		email: 'xuantrucx123@gmail.com',
-    		customerid: '123456'
-    	}
-  };
-  var identityCallback = function(result) { 
-  	if (result.getUser()) {
-		result.getUser().setUserAttribute('$leadsource','akadigital');
-    		console.log("LOGIN", result);
-  	}
-  };
-  mParticle.Identity.login(identityRequest, identityCallback);
 
   mParticle.logPageView('Landing', {'url':window.location.toString()});
 </script>
