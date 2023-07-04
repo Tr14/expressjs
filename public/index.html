@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       		// You can check if there's a populated user object, otherwise there was an error
       		// You can also inspect the result.httpCode - see below for a description of the supported codes
       	  	if (result.getUser()) {
-        		result.getUser().setUserAttribute('$leadsource', 'akadigital')
+        		result.getUser().setUserAttribute('$lastname', 'Nguyen')
 			console.log("CALLBACK", result)
           	} else {
         		//the IDSync call failed - see below for more details on failed requests
@@ -90,7 +90,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   var identityCallback = function(result) { 
   	if (result.getUser()) { 
-		result.getUser().setUserAttribute('$leadsource', 'akadigital')
+		rresult.getUser().setUserAttribute('$lastname', 'Nguyen')
     		console.log("LOGIN", result)
   	} 
   };
