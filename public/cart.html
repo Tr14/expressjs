@@ -76,9 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   });
 
   mParticle.logPageView('Page Views', {'url':window.location.toString()});
-  mParticle.logEvent("Cart Views", mParticle.EventType.Other, {[{'id':'1','sku':'83919','name':'Watch 1','url':window.location.toString()}, {'id':'2','sku':'11111','name':'Watch 2','url':window.location.toString()}]}
-  	);
-  };
+  mParticle.logEvent("Cart Views", mParticle.EventType.Other, {'items':[{'id':'1','name':'Watch 1'},{'id':'2','name':'Watch 2'}]});
 </script>
 
 	<!-- NETCORE -->
