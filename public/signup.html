@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFT78J6');</script>
+<!-- End Google Tag Manager -->
+		<meta charset="utf-8">
+		<title>EShopper - Bootstrap Shop Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/sign_up_style.css">
+<!-- NETCORE -->
+<script src='//cdnt.netcoresmartech.com/smartechclient.js'></script>
+<script>
+smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G' );
+smartech('register', '48ae623c4419221b6d4b53c360c56acc');
+smartech('identify', '');
+smartech('dispatch','Page Browse',{'url': window.location.href});
+
+function signUp(){
+	var email = document.getElementById("email_input").value;
+	var mobile = document.getElementById("mobile_input").value;
+	var full_name = document.getElementById("full_name_input").value;'
+	var gender = document.getElementById("gender_select").value;
+	smartech('contact', 81, {
+    		'pk^email': email,
+    		'mobile': mobile,
+		'FULL_NAME': full_name,
+		'GENDER': gender,
+		'SOURCE': 'dev.akadigital.net'
+    	});
+	smartech('identify', email);
+    	smartech('dispatch', 'Lead Submitted', {'url': window.location.href});
+}
+</script>
+	</head>
+
+	<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFT78J6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		<div class="wrapper">
+			<div class="inner">
+				<form action="https://dev.akadigital.net/">
+					<h3>Register An Account</h3>
+					<div class="form-row">
+						<div class="form-wrapper">
+							<label for="">Email Address *</label>
+							<input id="email_input" type="text" class="form-control" placeholder="Input Your Email">
+						</div>
+						<div class="form-wrapper">
+							<label for="">Mobile Number</label>
+							<input id="mobile_input" type="text" class="form-control" placeholder="Input Your Phone Number">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-wrapper">
+							<label for="">Name</label>
+							<input id="full_name_input" type="text" class="form-control" placeholder="Input Your Full Name">
+						</div>
+						<div class="form-wrapper">
+							<label for="">Address</label>
+							<input id="address_input" type="text" class="form-control" placeholder="Input Your Current Address">
+						</div>
+					</div>
+					<div class="form-row last">
+						<div class="form-wrapper">
+							<label for="">Gender</label>
+							<select name="" id="gender_select" class="form-control">
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+							</select>
+							<i class="zmdi zmdi-chevron-down"></i>
+						</div>
+						<div class="form-wrapper">
+							<label for="">Select Role</label>
+							<select name="" id="role_select" class="form-control">
+								<option value="Consumer">Consumer</option>
+								<option value="User">User</option>
+								<option value="Admin">Admin</option>
+							</select>
+							<i class="zmdi zmdi-chevron-down"></i>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Consent (Optional)
+							<span class="checkmark"></span>
+						</label>
+					</div>
+					<button data-text="Submit">
+						<span>Sign In</span>
+					</button>
+				</form>
+			</div>
+		</div>
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<script src="js/sign_up_main.js"></script>
+	</body>
+</html>
