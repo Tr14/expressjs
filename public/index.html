@@ -113,7 +113,7 @@ window.onload = function() {
 	const param = params.get("product_name");
 	console.info("PARAM", param);
 	var input = document.getElementById('input-1');
-	input.value = window.location.href;
+	input.value = param;
 }
 </script>
 
@@ -176,7 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-6 col-12 text-left search-inner">
                         <form action="" class="w-100 position-relative">
                             <div class="input-group">
-                                <input type="text" class="form-control" id="input-1">
+                                <input type="text" class="form-control" id="input-1" placeholder="Search Product in here">
                                 <div class="input-group-append">
                                     <span class="input-group-text bg-primary text-light">
                                         <i class="fa fa-search"></i>
