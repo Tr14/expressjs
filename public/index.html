@@ -110,7 +110,8 @@ smartech('dispatch','Page Browse',{'url': window.location.href});
 const params = new URLSearchParams(document.location.search);
 const param = params.get("product_name");
 console.info("PARAM", param);
-document.getElementsByClassName('form-control').innerHTML = param
+var input = document.getElementsByClassName('form-control');
+input.value = location.href;
 </script>
 
 </head>
