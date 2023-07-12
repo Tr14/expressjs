@@ -107,11 +107,14 @@ smartech('register', '48ae623c4419221b6d4b53c360c56acc');
 smartech('identify', '');
 smartech('dispatch','Page Browse',{'url': window.location.href});
 
-const params = new URLSearchParams(document.location.search);
-const param = params.get("product_name");
-console.info("PARAM", param);
-var input = document.getElementById('input-1');
-input.value = window.location.href;
+
+window.onload = function() {
+	const params = new URLSearchParams(document.location.search);
+	const param = params.get("product_name");
+	console.info("PARAM", param);
+	var input = document.getElementById('input-1');
+	input.value = window.location.href;
+}
 </script>
 
 </head>
