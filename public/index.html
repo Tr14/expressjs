@@ -40,8 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   window.mParticle = {
       config: {
           isDevelopmentMode: true,
-	  //logLevel: "verbose",
-/*
+	  logLevel: "verbose",
 	  identifyRequest: {
       		userIdentities: {
         		email: 'xuantrucx123@gmail.com',
@@ -60,7 +59,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			console.log("GET DATA FAIL")
           	}
 	  },
-*/
           dataPlan: {
             planId: 'dev_akadigital_net',
             planVersion: 1
@@ -91,6 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   var identityCallback = function(result) { 
   	if (result.getUser()) { 
+        	result.getUser().setUserAttribute('$firstname', 'Truc')
 		result.getUser().setUserAttribute('$lastname', 'Nguyen')
     		console.log("LOGIN SUCCESS", result)
   	} 
