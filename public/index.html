@@ -900,8 +900,13 @@
 </body>
 
 <script>
-    if (document.getElementsByTagName('iframe')[0]) {
-        console.log(document.getElementsByTagName('iframe')[0].contentDocument);
+    var iframe_document = document.getElementById('preview-notification-frame').contentDocument;
+
+    if (iframe_document.readyState !== 'loading') onLoadingCompleted();
+    else iframe_document.addEventListener('DOMContentLoaded', onLoadingCompleted);
+
+    function onLoadingCompleted() {
+        console.log('iFrame loaded!');
     }
 </script>
 
