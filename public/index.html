@@ -123,10 +123,7 @@
 
     <script>
         function showWM() {
-            var oldDiv = document.getElementById('netcore_banner');
-            var newDiv = document.getElementById('st_notification_banner');
-            newDiv.classList.add("new");
-            oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+            document.getElementById('netcore_banner') = document.getElementById('st_notification_banner');
         }
         window.onload = showWM;
     </script>
