@@ -900,16 +900,28 @@
 </body>
 
 <script>
-    window.onload = function () {
-        var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
+    function resolveAfter10Seconds(x) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
 
-        if (iframe_document.readyState !== 'loading') onLoadingCompleted();
-        else iframe_document.addEventListener('DOMContentLoaded', onLoadingCompleted);
+                if (iframe_document.readyState !== 'loading') onLoadingCompleted();
+                else iframe_document.addEventListener('DOMContentLoaded', onLoadingCompleted);
 
-        function onLoadingCompleted() {
-            console.log('iFrame loaded!');
-        }
+                function onLoadingCompleted() {
+                    console.log('iFrame loaded!');
+                }
+                resolve(x);
+            }, 10000);
+        });
     }
+
+    async function f1() {
+        const x = await resolveAfter10Seconds(10);
+        console.log(x);
+    }
+
+    f1();
 </script>
 
 </html>
