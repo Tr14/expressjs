@@ -226,7 +226,6 @@
             <div class="container">
                 <div class="row align-items-center py-3">
                     <div id="netcore_banner">
-
                     </div>
                 </div>
             </div>
@@ -923,7 +922,7 @@
         console.log(x);
 
         const main = document.querySelector('#netcore_banner');
-        const original = document.querySelector('#preview-notification-frame');
+        const original = document.getElementsByClassName('smt-modal-inner')[0];
         const clone = original.cloneNode(true);
 
         main.replaceWith(clone);
