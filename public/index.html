@@ -923,9 +923,8 @@
 
         const main = document.querySelector('#netcore_banner');
         const original = document.getElementsByClassName('smt-modal-inner')[0];
-        const clone = original.cloneNode(true);
 
-        main.replaceWith(clone);
+        main.replaceWith(original);
     }
 
     f1();
