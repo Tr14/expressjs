@@ -900,7 +900,7 @@
 </body>
 
 <script>
-    function resolveAfter10Seconds(x) {
+    function resolveAfterSeconds(x) {
         return new Promise((resolve) => {
             setTimeout(() => {
                 var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
@@ -912,12 +912,12 @@
                     console.log('iFrame loaded!');
                 }
                 resolve(x);
-            }, 10000);
+            }, 100000);
         });
     }
 
     async function f1() {
-        const x = await resolveAfter10Seconds(10);
+        const x = await resolveAfterSeconds(100000);
         console.log(x);
     }
 
