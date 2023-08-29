@@ -922,11 +922,7 @@
         const x = await resolveAfterSeconds(50000);
         console.log(x);
 
-        const main = document.querySelector('#netcore_banner');
-        const original = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML;
-        const html_data = '`' + original + '`';
-
-        main.replaceWith(html_data);
+        const original = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML = document.querySelector('#netcore_banner');
     }
 
     f1();
