@@ -913,12 +913,12 @@
                     console.log('iFrame loaded!');
                 }
                 resolve(x);
-            }, 50000);
+            }, 3000);
         });
     }
 
     async function f1() {
-        const x = await resolveAfterSeconds(50000);
+        const x = await resolveAfterSeconds(3000);
         console.log(x);
 
         var iframe_content = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML;
@@ -927,11 +927,6 @@
 
     }
     f1();
-
-    window.addEventListener("load", event => {
-        var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
-        document.getElementById('st_notification_banner').style.display = 'none';
-    });
 </script>
 
 </html>
