@@ -905,6 +905,7 @@
         return new Promise((resolve) => {
             setTimeout(() => {
                 var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
+                document.getElementById('st_notification_banner').style.display = 'none';
 
                 if (iframe_document.readyState !== 'loading') onLoadingCompleted();
                 else iframe_document.addEventListener('DOMContentLoaded', onLoadingCompleted);
@@ -923,8 +924,9 @@
 
         const main = document.querySelector('#netcore_banner');
         const original = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML;
+        const html_data = '`' + original + '`';
 
-        main.replaceWith(original);
+        main.replaceWith(html_data);
     }
 
     f1();
