@@ -927,6 +927,11 @@
 
     }
     f1();
+
+    window.addEventListener("load", event => {
+        var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
+        document.getElementById('st_notification_banner').style.display = 'none';
+    });
 </script>
 
 </html>
