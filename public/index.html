@@ -901,33 +901,7 @@
 </body>
 
 <script>
-    function resolveAfterSeconds(x) {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
 
-                if (iframe_document.readyState !== 'loading') onLoadingCompleted();
-                else iframe_document.addEventListener('DOMContentLoaded', onLoadingCompleted);
-
-                function onLoadingCompleted() {
-                    console.log('iFrame loaded!');
-                }
-                resolve(x);
-            }, 40000);
-        });
-    }
-
-    async function f1() {
-        const x = await resolveAfterSeconds(40000);
-        console.log(x);
-
-        const main = document.querySelector('#netcore_banner');
-        const original = document.getElementsByClassName('smt-modal-inner')[0];
-
-        main.replaceWith(original);
-    }
-
-    f1();
 </script>
 
 </html>
