@@ -900,11 +900,12 @@
 </body>
 
 <script>
-    document.getElementById('st_notification_banner').style.display = 'none';
+    /*
     function resolveAfterSeconds(x) {
         return new Promise((resolve) => {
             setTimeout(() => {
                 var iframe_document = document.querySelector('#preview-notification-frame').contentDocument;
+                document.getElementById('st_notification_banner').style.display = 'none';
 
                 if (iframe_document.readyState !== 'loading') onLoadingCompleted();
                 else iframe_document.addEventListener('DOMContentLoaded', onLoadingCompleted);
@@ -913,12 +914,12 @@
                     console.log('iFrame loaded!');
                 }
                 resolve(x);
-            }, 3000);
+            }, 50000);
         });
     }
 
     async function f1() {
-        const x = await resolveAfterSeconds(3000);
+        const x = await resolveAfterSeconds(50000);
         console.log(x);
 
         var iframe_content = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML;
@@ -927,6 +928,48 @@
 
     }
     f1();
+    */
+
+    function badIframe(iframe) {
+        return new Promise(resolve => {
+            // This uses the new Fetch API to see what happens when the src of the iframe is fetched from the webpage.
+            // This approach would also work with XHR. It would not be as nice to write, but may be preferred for compatibility reasons.
+            fetch(iframe.src)
+                .then(res => {
+                    // the res object represents the response from the server
+
+                    // res.ok is true if the repose has an "okay status" (200-299)
+                    if (res.ok) {
+                        resolve(false);
+                    } else {
+                        resolve(true);
+                    }
+
+                    /* Note: it's probably possible for an iframe source to be given a 300s
+                    status which means it'll redirect to a new page, and this may load
+                    property. In this case the script does not work. However, following the
+                    redirects until an eventual ok status or error is reached would be much
+                    more involved than the solution provided here. */
+                })
+                .catch(() => resolve(true));
+        });
+    }
+
+    new MutationObserver(async records => {
+        // This callback gets called when any nodes are added/removed from document.body.
+        // The {childList: true, subtree: true} options are what configures it to be this way.
+
+        // This loops through what is passed into the callback and finds any iframes that were added.
+        for (let record of records) {
+            for (let node of record.addedNodes) {
+                if (node.tagName === `IFRAME` && await badIframe(node)) {
+                    document.getElementById('st_notification_banner').style.display = 'none';
+                    var iframe_content = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML;
+                    document.getElementById('netcore_banner').innerHTML = iframe_content;
+                }
+            }
+        }
+    }).observe(document.body, { childList: true, subtree: true });
 </script>
 
 </html>
