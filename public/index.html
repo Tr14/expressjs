@@ -930,46 +930,31 @@
     f1();
     */
 
-    function badIframe(iframe) {
-        return new Promise(resolve => {
-            // This uses the new Fetch API to see what happens when the src of the iframe is fetched from the webpage.
-            // This approach would also work with XHR. It would not be as nice to write, but may be preferred for compatibility reasons.
-            fetch(iframe.src)
-                .then(res => {
-                    // the res object represents the response from the server
+    // Select the node that will be observed for mutations
+    const targetNode = document.getElementById("preview-notification-frame");
 
-                    // res.ok is true if the repose has an "okay status" (200-299)
-                    if (res.ok) {
-                        resolve(false);
-                    } else {
-                        resolve(true);
-                    }
+    // Options for the observer (which mutations to observe)
+    const config = { attributes: true, childList: true, subtree: true };
 
-                    /* Note: it's probably possible for an iframe source to be given a 300s
-                    status which means it'll redirect to a new page, and this may load
-                    property. In this case the script does not work. However, following the
-                    redirects until an eventual ok status or error is reached would be much
-                    more involved than the solution provided here. */
-                })
-                .catch(() => resolve(true));
-        });
-    }
-
-    new MutationObserver(async records => {
-        // This callback gets called when any nodes are added/removed from document.body.
-        // The {childList: true, subtree: true} options are what configures it to be this way.
-
-        // This loops through what is passed into the callback and finds any iframes that were added.
-        for (let record of records) {
-            for (let node of record.addedNodes) {
-                if (node.tagName === `IFRAME` && await badIframe(node)) {
-                    document.getElementById('st_notification_banner').style.display = 'none';
-                    var iframe_content = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML;
-                    document.getElementById('netcore_banner').innerHTML = iframe_content;
-                }
+    // Callback function to execute when mutations are observed
+    const callback = (mutationList, observer) => {
+        for (const mutation of mutationList) {
+            if (mutation.type === "childList") {
+                console.log("A child node has been added or removed.");
+            } else if (mutation.type === "attributes") {
+                console.log(`The ${mutation.attributeName} attribute was modified.`);
             }
         }
-    }).observe(document.body, { childList: true, subtree: true });
+    };
+
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(callback);
+
+    // Start observing the target node for configured mutations
+    observer.observe(targetNode, config);
+
+    // Later, you can stop observing
+    observer.disconnect();
 </script>
 
 </html>
