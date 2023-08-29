@@ -927,6 +927,11 @@
 
     }
     f1();
+
+    const iframe = document.getElementById("preview-notification-frame");
+    iframe.addEventListener("load", function () {
+        console.log("Finish");
+    });
 </script>
 
 </html>
