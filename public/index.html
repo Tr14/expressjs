@@ -224,9 +224,8 @@
         <!-- Netcore Banner -->
         <div class="header-inner py-4 bg-gray-900">
             <div class="container">
-                <div class="row align-items-center py-3">
-                    <div id="netcore_banner">
-                    </div>
+                <div class="row align-items-center py-3" id="netcore_banner">
+
                 </div>
             </div>
         </div>
@@ -924,7 +923,7 @@
 
         var iframe_content = document.getElementById('preview-notification-frame').contentWindow.document.body.innerHTML;
 
-        document.getElementById('netcore_banner').innerHTML = iframe_content;
+        document.getElementsByClassName('row align-items-center py-3').innerHTML = iframe_content;
 
     }
     f1();
