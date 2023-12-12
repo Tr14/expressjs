@@ -1,98 +1,94 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NFT78J6');</script>
-<!-- End Google Tag Manager -->
-        <meta charset="utf-8">
-        <title>EShopper - Bootstrap Shop Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free HTML Templates" name="keywords">
-        <meta content="Free HTML Templates" name="description">
-    
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
-    
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-    
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-        
-        <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    
-        
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NFT78J6');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <title>EShopper - Bootstrap Shop Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
-<!-- MPARTICLE -->
-<script>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-  //configure the SDK
-  window.mParticle = {
-      config: {
-          isDevelopmentMode: true,
-	  //logLevel: "verbose",
-	/*
-          identifyRequest: {
-              userIdentities: {
-                  email: 'xuantrucx123@gmail.com',
-                  customerid: '123456',
-              },
-          },
-          identityCallback: function(result) {
-            // Do something once an identity call has been made.
-            // For more information, see https://docs.mparticle.com/developers/sdk/web/idsync/#sdk-initialization-and-identify
-            //console.log(result);
-          },
-	*/
-          dataPlan: {
-            planId: 'dev_akadigital_net',
-            planVersion: 1
-          }
-      },
-  };
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-  //load the SDK
-  (
-  function(t){window.mParticle=window.mParticle||{};window.mParticle.EventType={Unknown:0,Navigation:1,Location:2,Search:3,Transaction:4,UserContent:5,UserPreference:6,Social:7,Other:8};window.mParticle.eCommerce={Cart:{}};window.mParticle.Identity={};window.mParticle.config=window.mParticle.config||{};window.mParticle.config.rq=[];window.mParticle.config.snippetVersion=2.3;window.mParticle.ready=function(t){window.mParticle.config.rq.push(t)};var e=["endSession","logError","logBaseEvent","logEvent","logForm","logLink","logPageView","setSessionAttribute","setAppName","setAppVersion","setOptOut","setPosition","startNewSession","startTrackingLocation","stopTrackingLocation"];var o=["setCurrencyCode","logCheckout"];var i=["identify","login","logout","modify"];e.forEach(function(t){window.mParticle[t]=n(t)});o.forEach(function(t){window.mParticle.eCommerce[t]=n(t,"eCommerce")});i.forEach(function(t){window.mParticle.Identity[t]=n(t,"Identity")});function n(e,o){return function(){if(o){e=o+"."+e}var t=Array.prototype.slice.call(arguments);t.unshift(e);window.mParticle.config.rq.push(t)}}var dpId,dpV,config=window.mParticle.config,env=config.isDevelopmentMode?1:0,dbUrl="?env="+env,dataPlan=window.mParticle.config.dataPlan;dataPlan&&(dpId=dataPlan.planId,dpV=dataPlan.planVersion,dpId&&(dpV&&(dpV<1||dpV>1e3)&&(dpV=null),dbUrl+="&plan_id="+dpId+(dpV?"&plan_version="+dpV:"")));var mp=document.createElement("script");mp.type="text/javascript";mp.async=true;mp.src="https://jssdkcdns.mparticle.com/js/v2/"+t+"/mparticle.js" + dbUrl;var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(mp,c)}
-  )("us1-e517f508764a7a448b1afdf22802317b");
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-  window.mParticle.ready(
-  function() { 
-    console.log('mParticle has loaded!'); 
-     // !! Note: do not attempt to access the user object at this point
-     // !! var user = window.mParticle.Identity.getCurrentUser();
-     // !! Instead, access the user object via the mParticle.config.identityCallback option
-  });
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
-  mParticle.logPageView('Page Views', {'url':window.location.toString()});
-  mParticle.logEvent("Cart Views", mParticle.EventType.Other, {'id':'1','name':'Watch 1'});
-</script>
 
-	<!-- NETCORE -->
-<script src='//cdnt.netcoresmartech.com/smartechclient.js'></script>
-<script>
-smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96BSUH1PDDQFBSPLEV97HGG26AH0G' );
-smartech('register', '48ae623c4419221b6d4b53c360c56acc');
-smartech('identify', '');
-smartech('dispatch','Page Browse',{'url': window.location.href});
-</script>
-    </head>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- MPARTICLE -->
+    <script>
+
+        //configure the SDK
+        window.mParticle = {
+            config: {
+                isDevelopmentMode: true,
+                //logLevel: "verbose",
+                /*
+                      identifyRequest: {
+                          userIdentities: {
+                              email: 'xuantrucx123@gmail.com',
+                              customerid: '123456',
+                          },
+                      },
+                      identityCallback: function(result) {
+                        // Do something once an identity call has been made.
+                        // For more information, see https://docs.mparticle.com/developers/sdk/web/idsync/#sdk-initialization-and-identify
+                        //console.log(result);
+                      },
+                */
+                dataPlan: {
+                    planId: 'dev_akadigital_net',
+                    planVersion: 1
+                }
+            },
+        };
+
+        //load the SDK
+        (
+            function (t) { window.mParticle = window.mParticle || {}; window.mParticle.EventType = { Unknown: 0, Navigation: 1, Location: 2, Search: 3, Transaction: 4, UserContent: 5, UserPreference: 6, Social: 7, Other: 8 }; window.mParticle.eCommerce = { Cart: {} }; window.mParticle.Identity = {}; window.mParticle.config = window.mParticle.config || {}; window.mParticle.config.rq = []; window.mParticle.config.snippetVersion = 2.3; window.mParticle.ready = function (t) { window.mParticle.config.rq.push(t) }; var e = ["endSession", "logError", "logBaseEvent", "logEvent", "logForm", "logLink", "logPageView", "setSessionAttribute", "setAppName", "setAppVersion", "setOptOut", "setPosition", "startNewSession", "startTrackingLocation", "stopTrackingLocation"]; var o = ["setCurrencyCode", "logCheckout"]; var i = ["identify", "login", "logout", "modify"]; e.forEach(function (t) { window.mParticle[t] = n(t) }); o.forEach(function (t) { window.mParticle.eCommerce[t] = n(t, "eCommerce") }); i.forEach(function (t) { window.mParticle.Identity[t] = n(t, "Identity") }); function n(e, o) { return function () { if (o) { e = o + "." + e } var t = Array.prototype.slice.call(arguments); t.unshift(e); window.mParticle.config.rq.push(t) } } var dpId, dpV, config = window.mParticle.config, env = config.isDevelopmentMode ? 1 : 0, dbUrl = "?env=" + env, dataPlan = window.mParticle.config.dataPlan; dataPlan && (dpId = dataPlan.planId, dpV = dataPlan.planVersion, dpId && (dpV && (dpV < 1 || dpV > 1e3) && (dpV = null), dbUrl += "&plan_id=" + dpId + (dpV ? "&plan_version=" + dpV : ""))); var mp = document.createElement("script"); mp.type = "text/javascript"; mp.async = true; mp.src = "https://jssdkcdns.mparticle.com/js/v2/" + t + "/mparticle.js" + dbUrl; var c = document.getElementsByTagName("script")[0]; c.parentNode.insertBefore(mp, c) }
+        )("us1-e517f508764a7a448b1afdf22802317b");
+
+        window.mParticle.ready(
+            function () {
+                console.log('mParticle has loaded!');
+                // !! Note: do not attempt to access the user object at this point
+                // !! var user = window.mParticle.Identity.getCurrentUser();
+                // !! Instead, access the user object via the mParticle.config.identityCallback option
+            });
+
+        mParticle.logPageView('Page Views', { 'url': window.location.toString() });
+        mParticle.logEvent("Cart Views", mParticle.EventType.Other, { 'id': '1', 'name': 'Watch 1' });
+    </script>
+</head>
+
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFT78J6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFT78J6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header id="header">
         <!-- Topbar Start -->
         <div class="header-top bg-gray-900 py-2">
@@ -136,7 +132,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="row align-items-center py-3">
                     <div class="col-lg-3 d-none d-lg-block">
                         <a href="" class="text-decoration-none">
-                            <h2 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">WATCH</span><span class="text-light">SHOP</span></h2>
+                            <h2 class="m-0 display-5 font-weight-semi-bold"><span
+                                    class="text-primary font-weight-bold border px-3 mr-1">WATCH</span><span
+                                    class="text-light">SHOP</span></h2>
                         </a>
                     </div>
                     <div class="col-lg-6 col-6 text-left search-inner">
@@ -159,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <li class="list-group-item">Morbi leo risus</li>
                                         <li class="list-group-item">Porta ac consectetur ac</li>
                                         <li class="list-group-item">Vestibulum at eros</li>
-                                      </ul>
+                                    </ul>
 
                                     <a href="" class="btn text-center w-100 p-2 btn-show-all">All</a>
                                 </div>
@@ -188,19 +186,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg bg-gray-900 navbar-light py-3 py-lg-0 px-0">
                             <a href="" class="text-decoration-none d-block d-lg-none">
-                                <h2 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">WATCH</span>SHOP</h2>
+                                <h2 class="m-0 display-5 font-weight-semi-bold"><span
+                                        class="text-primary font-weight-bold border px-3 mr-1">WATCH</span>SHOP</h2>
                             </a>
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbarCollapse">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarCollapse">
                                 <div class="navbar-nav mr-auto py-0 w-100 d-flex justify-content-center">
-                                    <a href="https://dev.akadigital.net/" class="nav-item nav-link position-relative text-uppercase mx-4 active">Home</a>
-                                    <a href="https://dev.akadigital.net/shop" class="nav-item nav-link position-relative text-uppercase  mx-4">Shop</a>
-                                    <a href="https://dev.akadigital.net/detail" class="nav-item nav-link position-relative text-uppercase  mx-4">Shop Detail</a>
-                                    <a href="https://dev.akadigital.net/cart" class="nav-item nav-link position-relative text-uppercase  mx-4">Shopping Cart</a>
-                                    <a href="https://dev.akadigital.net/checkout" class="nav-item nav-link position-relative text-uppercase  mx-4">Checkout</a>
-                                    <a href="https://dev.akadigital.net/contact" class="nav-item nav-link position-relative text-uppercase  mx-4">Contact</a>
+                                    <a href="https://dev.akadigital.net/"
+                                        class="nav-item nav-link position-relative text-uppercase mx-4 active">Home</a>
+                                    <a href="https://dev.akadigital.net/shop"
+                                        class="nav-item nav-link position-relative text-uppercase  mx-4">Shop</a>
+                                    <a href="https://dev.akadigital.net/detail"
+                                        class="nav-item nav-link position-relative text-uppercase  mx-4">Shop Detail</a>
+                                    <a href="https://dev.akadigital.net/cart"
+                                        class="nav-item nav-link position-relative text-uppercase  mx-4">Shopping
+                                        Cart</a>
+                                    <a href="https://dev.akadigital.net/checkout"
+                                        class="nav-item nav-link position-relative text-uppercase  mx-4">Checkout</a>
+                                    <a href="https://dev.akadigital.net/contact"
+                                        class="nav-item nav-link position-relative text-uppercase  mx-4">Contact</a>
                                 </div>
                             </div>
                         </nav>
@@ -242,10 +249,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </tr>
                     </thead>
                     <tbody class="align-middle">
-                        
+
                     </tbody>
                 </table>
-                <a href="./shop.html" class="btn btn-primary"><i class="fa-solid fa-arrow-left mr-2"></i> TIẾP TỤC MUA SẮM</a>
+                <a href="./shop.html" class="btn btn-primary"><i class="fa-solid fa-arrow-left mr-2"></i> TIẾP TỤC MUA
+                    SẮM</a>
                 <button class="btn-update-cart btn btn-primary">CẬP NHẬT GIỎ HÀNG</button>
             </div>
             <div class="col-lg-4">
@@ -276,7 +284,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <h5 class="font-weight-bold">Total</h5>
                             <h5 class="total-cart font-weight-bold">$160</h5>
                         </div>
-                        <a href="./checkout.html" class="btn-proceed-ckeckout btn btn-block btn-primary my-3 py-3">Proceed To Checkout</a>
+                        <a href="./checkout.html"
+                            class="btn-proceed-ckeckout btn btn-block btn-primary my-3 py-3">Proceed To Checkout</a>
                     </div>
                 </div>
             </div>
@@ -291,9 +300,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row  pt-5">
                 <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
                     <a href="" class="text-decoration-none">
-                        <h2 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">WATCH</span><span class="text-light">SHOP</span></h2>
+                        <h2 class="mb-4 display-5 font-weight-semi-bold"><span
+                                class="text-primary font-weight-bold border border-white px-3 mr-1">WATCH</span><span
+                                class="text-light">SHOP</span></h2>
                     </a>
-                    <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>
+                    <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna
+                        ipsum dolore amet erat.</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-light mr-3"></i>123 Street, New York, USA</p>
                     <p class="mb-2"><i class="fa fa-envelope text-light mr-3"></i>info@example.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-light mr-3"></i>+012 345 67890</p>
@@ -303,37 +315,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="col-md-4 mb-5">
                             <h5 class="font-weight-bold text-light mb-4">Quick Links</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                                <a class="text-light mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                                <a class="text-light mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                                <a class="text-light mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                                <a class="text-light mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                                <a class="text-light" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                <a class="text-light mb-2" href="index.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-light mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our
+                                    Shop</a>
+                                <a class="text-light mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop
+                                    Detail</a>
+                                <a class="text-light mb-2" href="cart.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                                <a class="text-light mb-2" href="checkout.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Checkout</a>
+                                <a class="text-light" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
+                                    Us</a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-5">
                             <h5 class="font-weight-bold text-light mb-4">Quick Links</h5>
                             <div class="d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                                <a class="text-light mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                                <a class="text-light mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                                <a class="text-light mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                                <a class="text-light mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                                <a class="text-light" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                <a class="text-light mb-2" href="index.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-light mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our
+                                    Shop</a>
+                                <a class="text-light mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop
+                                    Detail</a>
+                                <a class="text-light mb-2" href="cart.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                                <a class="text-light mb-2" href="checkout.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Checkout</a>
+                                <a class="text-light" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
+                                    Us</a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-5">
                             <h5 class="font-weight-bold text-light mb-4">Newsletter</h5>
                             <form action="">
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
+                                    <input type="text" class="form-control border-0 py-4" placeholder="Your Name"
+                                        required="required" />
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
                                         required="required" />
                                 </div>
                                 <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>
+                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe
+                                        Now</button>
                                 </div>
                             </form>
                         </div>
